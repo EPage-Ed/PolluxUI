@@ -3,19 +3,34 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6CD31BD94E5B432DE0399BAF /* Pods_PolluxUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D5920577CA0AE82406C4117 /* Pods_PolluxUI.framework */; };
+		D82AC4EC235ABF9B00984034 /* BeaconDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82AC4EB235ABF9B00984034 /* BeaconDetector.swift */; };
+		D867232B235792C900F67B5B /* bloop.wav in Resources */ = {isa = PBXBuildFile; fileRef = D867232A235792C800F67B5B /* bloop.wav */; };
+		D87CE9D42355281E00404829 /* newAd.wav in Resources */ = {isa = PBXBuildFile; fileRef = D87CE9D32355281E00404829 /* newAd.wav */; };
 		D8A7B5D0234FEA9800E674B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A7B5CF234FEA9800E674B4 /* AppDelegate.swift */; };
 		D8A7B5D2234FEA9800E674B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A7B5D1234FEA9800E674B4 /* SceneDelegate.swift */; };
 		D8A7B5D4234FEA9800E674B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A7B5D3234FEA9800E674B4 /* ContentView.swift */; };
 		D8A7B5D6234FEA9A00E674B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8A7B5D5234FEA9A00E674B4 /* Assets.xcassets */; };
 		D8A7B5D9234FEA9A00E674B4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8A7B5D8234FEA9A00E674B4 /* Preview Assets.xcassets */; };
 		D8A7B5DC234FEA9A00E674B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8A7B5DA234FEA9A00E674B4 /* LaunchScreen.storyboard */; };
+		D8A7B5E4234FEE4000E674B4 /* Advertisement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A7B5E3234FEE4000E674B4 /* Advertisement.swift */; };
+		D8A7B5E823500D9A00E674B4 /* AdvertisingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A7B5E723500D9A00E674B4 /* AdvertisingList.swift */; };
+		D8A7B5EA2350215B00E674B4 /* AdvertisementRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A7B5E92350215B00E674B4 /* AdvertisementRow.swift */; };
+		D8A7B5EC2351087E00E674B4 /* ShowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A7B5EB2351087E00E674B4 /* ShowData.swift */; };
+		D8B06623235F86AE00493D5F /* HistoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B06622235F86AE00493D5F /* HistoryList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		195CB0585B3645CEDF7B5919 /* Pods-PolluxUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolluxUI.release.xcconfig"; path = "Target Support Files/Pods-PolluxUI/Pods-PolluxUI.release.xcconfig"; sourceTree = "<group>"; };
+		6D5920577CA0AE82406C4117 /* Pods_PolluxUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PolluxUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD1D492E49E05682D3AEB365 /* Pods-PolluxUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolluxUI.debug.xcconfig"; path = "Target Support Files/Pods-PolluxUI/Pods-PolluxUI.debug.xcconfig"; sourceTree = "<group>"; };
+		D82AC4EB235ABF9B00984034 /* BeaconDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconDetector.swift; sourceTree = "<group>"; };
+		D867232A235792C800F67B5B /* bloop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bloop.wav; sourceTree = "<group>"; };
+		D87CE9D32355281E00404829 /* newAd.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = newAd.wav; sourceTree = "<group>"; };
 		D8A7B5CC234FEA9800E674B4 /* PolluxUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PolluxUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8A7B5CF234FEA9800E674B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8A7B5D1234FEA9800E674B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +39,11 @@
 		D8A7B5D8234FEA9A00E674B4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D8A7B5DB234FEA9A00E674B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8A7B5DD234FEA9A00E674B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8A7B5E3234FEE4000E674B4 /* Advertisement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertisement.swift; sourceTree = "<group>"; };
+		D8A7B5E723500D9A00E674B4 /* AdvertisingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisingList.swift; sourceTree = "<group>"; };
+		D8A7B5E92350215B00E674B4 /* AdvertisementRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisementRow.swift; sourceTree = "<group>"; };
+		D8A7B5EB2351087E00E674B4 /* ShowData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowData.swift; sourceTree = "<group>"; };
+		D8B06622235F86AE00493D5F /* HistoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +51,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CD31BD94E5B432DE0399BAF /* Pods_PolluxUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D453800BAC830990BA503A0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AD1D492E49E05682D3AEB365 /* Pods-PolluxUI.debug.xcconfig */,
+				195CB0585B3645CEDF7B5919 /* Pods-PolluxUI.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D83A461521EADAC522B71CCF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D5920577CA0AE82406C4117 /* Pods_PolluxUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D87CE9D22355281E00404829 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				D867232A235792C800F67B5B /* bloop.wav */,
+				D87CE9D32355281E00404829 /* newAd.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		D8A7B5C3234FEA9800E674B4 = {
 			isa = PBXGroup;
 			children = (
 				D8A7B5CE234FEA9800E674B4 /* PolluxUI */,
 				D8A7B5CD234FEA9800E674B4 /* Products */,
+				7D453800BAC830990BA503A0 /* Pods */,
+				D83A461521EADAC522B71CCF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,9 +105,16 @@
 		D8A7B5CE234FEA9800E674B4 /* PolluxUI */ = {
 			isa = PBXGroup;
 			children = (
+				D87CE9D22355281E00404829 /* Sounds */,
 				D8A7B5CF234FEA9800E674B4 /* AppDelegate.swift */,
 				D8A7B5D1234FEA9800E674B4 /* SceneDelegate.swift */,
+				D8A7B5EB2351087E00E674B4 /* ShowData.swift */,
+				D82AC4EB235ABF9B00984034 /* BeaconDetector.swift */,
+				D8A7B5E3234FEE4000E674B4 /* Advertisement.swift */,
 				D8A7B5D3234FEA9800E674B4 /* ContentView.swift */,
+				D8A7B5E723500D9A00E674B4 /* AdvertisingList.swift */,
+				D8B06622235F86AE00493D5F /* HistoryList.swift */,
+				D8A7B5E92350215B00E674B4 /* AdvertisementRow.swift */,
 				D8A7B5D5234FEA9A00E674B4 /* Assets.xcassets */,
 				D8A7B5DA234FEA9A00E674B4 /* LaunchScreen.storyboard */,
 				D8A7B5DD234FEA9A00E674B4 /* Info.plist */,
@@ -82,9 +138,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D8A7B5E0234FEA9A00E674B4 /* Build configuration list for PBXNativeTarget "PolluxUI" */;
 			buildPhases = (
+				3F1054EDE64AE8379E38D453 /* [CP] Check Pods Manifest.lock */,
 				D8A7B5C8234FEA9800E674B4 /* Sources */,
 				D8A7B5C9234FEA9800E674B4 /* Frameworks */,
 				D8A7B5CA234FEA9800E674B4 /* Resources */,
+				2F8D5D9C441559B67D73F863 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +191,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D867232B235792C900F67B5B /* bloop.wav in Resources */,
+				D87CE9D42355281E00404829 /* newAd.wav in Resources */,
 				D8A7B5DC234FEA9A00E674B4 /* LaunchScreen.storyboard in Resources */,
 				D8A7B5D9234FEA9A00E674B4 /* Preview Assets.xcassets in Resources */,
 				D8A7B5D6234FEA9A00E674B4 /* Assets.xcassets in Resources */,
@@ -141,14 +201,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2F8D5D9C441559B67D73F863 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PolluxUI/Pods-PolluxUI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PolluxUI/Pods-PolluxUI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PolluxUI/Pods-PolluxUI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F1054EDE64AE8379E38D453 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PolluxUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D8A7B5C8234FEA9800E674B4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8B06623235F86AE00493D5F /* HistoryList.swift in Sources */,
+				D8A7B5EA2350215B00E674B4 /* AdvertisementRow.swift in Sources */,
+				D82AC4EC235ABF9B00984034 /* BeaconDetector.swift in Sources */,
+				D8A7B5E823500D9A00E674B4 /* AdvertisingList.swift in Sources */,
 				D8A7B5D0234FEA9800E674B4 /* AppDelegate.swift in Sources */,
+				D8A7B5E4234FEE4000E674B4 /* Advertisement.swift in Sources */,
 				D8A7B5D2234FEA9800E674B4 /* SceneDelegate.swift in Sources */,
 				D8A7B5D4234FEA9800E674B4 /* ContentView.swift in Sources */,
+				D8A7B5EC2351087E00E674B4 /* ShowData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +390,7 @@
 		};
 		D8A7B5E1234FEA9A00E674B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD1D492E49E05682D3AEB365 /* Pods-PolluxUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +411,7 @@
 		};
 		D8A7B5E2234FEA9A00E674B4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 195CB0585B3645CEDF7B5919 /* Pods-PolluxUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

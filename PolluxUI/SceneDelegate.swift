@@ -8,26 +8,46 @@
 
 import UIKit
 import SwiftUI
+import Parse
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    var showData = ShowData()
 
+    func configureParse() {
+        AdClass.registerSubclass()
+    }
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
+        let configuration = ParseClientConfiguration {
+          $0.applicationId = "iqeEuY9TcyeZQxefpSimZVfZ6E0GEp9e5cxlDY85"
+          $0.clientKey = "ls1OCbhmFq6jfqoexXEzZXecd6bVlh3Ay3uaKSpz"
+          $0.server = "https://parseapi.back4app.com"
+        }
+        Parse.initialize(with: configuration)
+        
+        configureParse()
+
         // Create the SwiftUI view that provides the window contents.
         let contentView = ContentView()
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
+
+            UITableView.appearance().allowsSelection = false
+            UITableViewCell.appearance().selectionStyle = .none
+
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: contentView)
+            window.rootViewController = UIHostingController(rootView: contentView.environmentObject(showData))
             self.window = window
             window.makeKeyAndVisible()
+            
+            showData.fetch(showId: "Test")
         }
     }
 

@@ -1,0 +1,208 @@
+<html>
+<head>
+  <title>Gemini Ad Insertion</title>
+  <link href="https://vjs.zencdn.net/7.6.5/video-js.css" rel="stylesheet">
+
+  <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script>
+    Parse.initialize("iqeEuY9TcyeZQxefpSimZVfZ6E0GEp9e5cxlDY85", "zmNAPleTOkpXZM4gWV46ziE9fx4YycPKG8ma3UuQ"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
+    Parse.serverURL = "https://parseapi.back4app.com/";
+  </script>
+
+  <script>
+    var movie = "";
+
+    function loadAds() {
+      var Ad = Parse.Object.extend("Advertisement");
+      var textName = "Test";
+
+      query = new Parse.Query(Ad);
+      query.equalTo("showId", textName);
+      query.first().then(function(ad){
+        if (ad) {
+          $('#ad').html(ad.get("name"));
+//          console.log('Ad found successful with name: ' + pet.get("name") + ' and age: ' + pet.get("age"));
+        } else {
+          $('#ad').html("No Ads");
+//          console.log("Nothing found, please try again");
+        }
+      }).catch(function(error){
+//        console.log("Error: " + error.code + " " + error.message);       
+      });
+    }
+
+    function selectShow(select) {
+      const player = videojs('my-video', {});
+
+      if (select.selectedIndex == 2) {
+        player.src("Inception.mp4");
+      } else {
+        player.src("batman.mp4");
+      }
+      if (select.selectedIndex == 0) {
+        $('#previewPane').css('display','none');
+      } else {
+        $('#previewPane').css('display','block');
+      }
+    }
+
+    function getTimestamp() {
+      const player = videojs('my-video', {});
+      var whereYouAt = player.currentTime();
+      // console.log(whereYouAt);
+      var min = Math.floor(whereYouAt / 60.0);
+      var sec = Math.floor(whereYouAt - (min * 60));
+      var str = "0:" + String(min).padStart(2,'0') + ":" + String(sec).padStart(2,'0');
+      console.log(str);
+      $('#insertTime').html(str);
+      $('#displayTime').value(str);
+    }
+
+    function saveAd() {
+      var ad = $('#newAdForm').val;
+      console.log(ad);
+      var vals = $('#newAdForm').serialize();
+      console.log(vals);
+      var values = {};
+      $.each($('#newAdForm').serializeArray(), function(i, field) {
+        values[field.name] = field.value;
+      });
+      console.log(values);
+    }
+
+
+  </script>
+  
+</head>
+<body>
+  <h1 style='display:inline-block; vertical-align: middle'><img src='gemini.png' style='vertical-align: middle; width:50px; height:50px;'> Gemini Ad Insertion</h1>
+
+    <div id='previewPane' style='display:none; border:1px solid black; padding-bottom: 20px;'>
+    <video id='my-video' class='video-js' controls preload='auto' width='640' height='360'
+    poster='MY_VIDEO_POSTER.jpg' data-setup='{}'>
+      <source src='batman.mp4' type='video/mp4'>
+      <p class='vjs-no-js'>
+        To view this video please enable JavaScript, and consider upgrading to a web browser that
+        <a href='https://videojs.com/html5-video-support/' target='_blank'>supports HTML5 video</a>
+      </p>
+    </video>
+  
+    <script src='https://vjs.zencdn.net/7.6.5/video.js'></script>
+  
+    <button onclick="getTimestamp()">Insert Ad Here</button>
+    </div>
+  <form id='newAdForm'>
+  <table>
+    <tr>
+      <td>
+        <select id='show' name="show" onchange="selectShow(this)">
+          <option value=''>Select Show</option>
+          <option value='lb'>Lego Batman</option>
+          <option value='ic'>Inception</option>
+          <option value='jl'>Justice League</option>
+          <option value='ww'>Wonder Woman</option>
+        </select>
+      </td>
+      <td><span>Insertion Time: </span><span id='insertTime' style='display:inline-block; min-width:50px'> </span>
+        <input type='hidden' id='displayTime' name='displayTime' value=''>
+      </td>
+      <td>
+        <select id='gender' name="gender">
+          <option value=''>Gender</option>
+          <option value='Male'>Male</option>
+          <option value='Female'>Female</option>
+          <option value='Either'>Either</option>
+        </select>
+      </td>
+      <td>
+        <select id='minAge' name="minAge">
+          <option value=''>Minimum Age</option>
+          <option value='0'>0</option>
+          <option value='5'>5</option>
+          <option value='10'>10</option>
+          <option value='14'>14</option>
+          <option value='18'>18</option>
+          <option value='21'>21</option>
+          <option value='25'>25</option>
+          <option value='34'>34</option>
+          <option value='49'>49</option>
+          <option value='55'>55</option>
+          <option value='60'>60</option>
+          <option value='65'>65</option>
+        </select>
+      </td>
+      <td>
+        <select id='maxAge' name='maxAge'>
+          <option value=''>Maximum Age</option>
+          <option value='5'>5</option>
+          <option value='10'>10</option>
+          <option value='14'>14</option>
+          <option value='18'>18</option>
+          <option value='21'>21</option>
+          <option value='25'>25</option>
+          <option value='34'>34</option>
+          <option value='49'>49</option>
+          <option value='55'>55</option>
+          <option value='60'>60</option>
+          <option value='65'>65</option>
+          <option value='99'>99</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Text: </td><td colspan=4><input id='message' name='message' type='text' style='width:100%'></td>
+    </tr>
+    <tr>
+      <td>URL: </td><td colspan=4><input id='linkurl' name='linkurl' type='text' style='width:100%'></td>
+    </tr>
+    <tr>
+      <td>Action: </td><td colspan=4>
+        <select id='action' name='action'>
+          <option value=''>Action</option>
+          <option value='buy'>Buy</option>
+          <option value='info'>Info</option>
+          <option value='none'>None</option>
+        </select>
+        </td>
+    </tr>
+  </table>
+  <button type='submit' style='font-size:16pt')>Save Ad Buy</button>
+  </form>
+
+  <hr>
+  Ad<br>
+  <div id="ad"></div>
+
+  <script>
+    loadAds();
+
+// [{name: "show", value: ""}, {name: "gender", value: ""}, {name: "minAge", value: ""},
+// {name: "maxAge", value: ""}, {name: "message", value: ""}, {name: "linkurl", value: ""}, {name: "action", value: ""}] (7) (index.html, line 171)
+    $( "#newAdForm" ).submit(function( event ) {
+      event.preventDefault();
+      const fields = $( this ).serializeArray();
+      console.log( fields );
+
+      const Ad = Parse.Object.extend("Advertisement");
+      const ad = new Ad();
+
+      $.each( fields, function (i, field) {
+        ad.set(field.name, field.value);
+//        console.log(field.name);
+//        console.log(field.value);
+      });
+      ad.set("showId","Test");
+      ad.save()
+      .then((ad) => {
+        alert('New object created with objectId: ' + ad.id);
+      }, (error) => {
+        alert('Failed to create new object, with error code: ' + error.message);
+      });
+
+    });
+  </script>
+</body>
+
+</html>

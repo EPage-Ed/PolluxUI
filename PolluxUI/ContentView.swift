@@ -7,10 +7,19 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ContentView: View {
+    @EnvironmentObject var showData: ShowData
+
     var body: some View {
-        Text("Hello World")
+        AdvertisingList(beaconDetector: BeaconDetector.shared.setData(data: showData))
+//        .environmentObject(showData)
+        
+
+//        Text("Hello World")
+//            .font(.title)
+            
     }
 }
 
